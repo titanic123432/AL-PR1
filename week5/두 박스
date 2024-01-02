@@ -1,0 +1,32 @@
+#include <iostream>
+#include <algorithm>
+#include <cstdio>
+using namespace std;
+/* run this program using the console pauser or add your own getch, system("pause") or input loop */
+
+struct data
+{
+int x1 = 0,x2 = 0,y1 = 0,y2 = 0;
+}a,b;
+int main(int argc, char** argv) 
+{
+	scanf("%d %d %d %d",&a.x1,&a.y1, &a.x2, &a.y2);
+	scanf("%d %d %d %d",&b.x1,&b.y1, &b.x2, &b.y2);	
+	if(a.x1 > b.x2|| b.x1 > a.x2 || a.y1 > b.y2 || b.y1 > a.y2)
+	{
+		printf("NULL");
+	}
+	else if((a.x1 == b.x2 || a.x2 == b.x1 ) && (a.y1 == b.y2 || a.y2 == b.y1))	
+	{
+		printf("POINT");		
+	}
+	else if((a.x1 == b.x2 || a.x2 == b.x1) || (a.y1 == b.y2 || a.y2 == b.y1)) 
+	{
+		printf("LINE");
+	}
+	else
+	{
+		printf("FACE");
+	}
+	return 0;
+}
