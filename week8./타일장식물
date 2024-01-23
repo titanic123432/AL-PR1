@@ -1,0 +1,20 @@
+#include <iostream>
+#include <algorithm>
+using namespace std;
+/* run this program using the console pauser or add your own getch, system("pause") or input loop */
+long long s[81];
+int main(int argc, char** argv) 
+{
+	int n = 0;
+	long long num = 1;
+	s[0] = 0;
+	s[1] = 4;
+	s[2] = 6;
+	for(int i = 3; i < 81; i++)
+	{
+		s[i] = s[i - 1] + s[i - 2];
+	}
+	scanf("%d",&n);
+	printf("%lld",s[n]);
+	return 0;
+}
