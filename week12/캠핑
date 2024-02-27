@@ -1,0 +1,39 @@
+#include <iostream>
+#include <algorithm>
+using namespace std;
+/* run this program using the console pauser or add your own getch, system("pause") or input loop */
+
+https://www.youtube.com/watch?v=dQw4w9WgXcQ
+
+int main(int argc, char** argv) 
+{
+	int d[100001];
+	int e = 0, stack = 0;
+	int l = -1,p = -1 ,v = -1;
+	int t = 0,c = 1;
+	int w, b, r;
+	while(1)
+	{
+		scanf("%d %d %d",&l, &p, &v);
+		
+		if(l == 0 && p == 0 && v == 0)
+		{
+			break;
+		}
+		
+		t++;
+		w = (v / p);
+		b = w * l;
+		r = v % p;
+		if(r > l)
+		{
+			r = l;
+		}
+		e = b + r;
+
+		printf("Case %d: %d\n",c,e);
+		c++;
+		e = 0, stack = 0;	
+	}
+	return 0;
+}
