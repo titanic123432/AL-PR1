@@ -1,0 +1,31 @@
+#include <cstdio>
+#include <iostream>
+#include <algorithm>
+#include <cstring>
+#include <vector>
+using namespace std;
+
+/* run this program using the console pauser or add your own getch, system("pause") or input loop */
+
+int main(int argc, char** argv) 
+{
+	int n,l; //n 은 파이프 구멍의 개수, l은 테이프 길이(테이프는 무한개이며 잘라서 쓸 수 없고 곂쳐서 쓸수 있다) 
+	int water[10001];
+	scanf("%d %d",&n, &l);
+	int need = 0;
+	for(int i = 0; i < n; i++)
+	{
+		scanf("%d",&water[i]);
+	}
+	sort(water, water + n);
+	for(int i = 0; i < n; i++) 
+	{
+		if(l >= water[i + 1] - water[i] + 1)
+		{
+			need++;
+			i++;
+		}
+	}
+	printf("%d",need);
+	return 0;
+}
