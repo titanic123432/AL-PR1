@@ -10,36 +10,14 @@ int main(int argc, char** argv)
 	scanf("%d %d %d %d",&a, &b, &c, &s);
 	for(int i = 0; i <= s; i++)
 	{
-		if(a * x + b * y + c * z == s)
-		{
-			printf("1");
-			return 0;
-		}
-		else
-		{
-			x++;
-		}
 		for(int j = 0; j <= s; j++)
 		{
-			if(a * x + b * y + c * z == s)
-			{
-				printf("1");
-				return 0;
-			}
-			else
-			{
-				y++;
-			}
 			for(int k = 0; k <= s; k++)
 			{
-				if(a * x + b * y + c * z == s)
+				if((i * a)+ (j * b) + (k * c)== s)
 				{
 					printf("1");
 					return 0;
-				}
-				else
-				{
-					z++;
 				}
 			}
 		}
